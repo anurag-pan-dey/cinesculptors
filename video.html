@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+<head>
+    <title>Video</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/cine.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700%7COpen+Sans:400,600,700%7CSource+Code+Pro:300,400,500,600,700,900%7CNothing+You+Could+Do%7CPoppins:400,500">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+         body {
+  flex-direction: column;
+ 
+  background: linear-gradient(to bottom, #f1f1f1, #b0b0b0);
+}
+       .video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+
+        /* Add responsive styles for the video container */
+        /* Update CSS to arrange videos side by side without space */
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .video-container {
+            width: calc(24% - 1px); /* Set width to 25% of the container width (minus 1px to prevent wrapping) */
+            margin-right: 0; /* Remove margin-right */
+            box-sizing: border-box; /* Include padding and border in width calculation */
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70%; /* Adjust height to fill container */
+        }
+        .breadcrumbs-custom {
+    position: relative; /* Add this to make sure content is positioned relative to this element */
+}
+
+.breadcrumbs-custom .container {
+    position: relative; /* Add this to make sure content is positioned relative to this container */
+    z-index: 1; /* Ensure content appears above the background video */
+}
+.video-background {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        overflow: hidden;
+    }
+    #bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+}
+#bg-video {
+        width: 100%;
+        height: 80%;
+        object-fit: cover; /* Ensures the video covers the entire container */
+    }
+
+        
+    </style>
+</head>
+<body>
+<div class="ie-panel"><a href="#"><img src="images/cine.png" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+<div class="preloader">
+    <div class="preloader-body">
+        <div class="cssload-container">
+            <div class="cssload-speeding-wheel"></div>
+        </div>
+    </div>
+</div>
+<div class="page">
+    <header class="section page-header">
+        <!--RD Navbar-->
+        <div class="rd-navbar-wrap" style="position: absolute">
+            <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                <div class="rd-navbar-main-outer">
+                    <div class="rd-navbar-main">
+                        <!--RD Navbar Panel-->
+                        <div class="rd-navbar-panel">
+                            <!--RD Navbar Toggle-->
+                            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                            <!--RD Navbar Brand-->
+                            <div class="rd-navbar-brand">
+                                <!--Brand--><a class="brand" href="index.html"><img src="images/cine.png" alt="" width="148" height="26"/></a>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-main-element">
+                            <div class="rd-navbar-nav-wrap">
+                                <ul class="rd-navbar-nav">
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                                    </li>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="rd-nav-item active"><a class="rd-nav-link" href="video.html">Video</a>
+                                    </li>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a>
+                                    </li>
+                                    <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="rd-navbar-collapse">
+                            <ul class="socialite-list">
+                                
+                                <li><a class="icon novi-icon socialite fa-instagram" href="https://www.instagram.com/cinesculptors/"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Breadcrumbs-->
+    <section class="breadcrumbs-custom bg-video context-dark">
+        <!-- Background Video -->
+        <video autoplay muted loop id="bg-video">
+            <source src="video/download (34).mp4" type="video/mp4">
+            
+        </video>
+        <div class="container">
+            <h1 class="breadcrumbs-custom-title">CINEMATIC VISION</h1>
+        </div>
+        <ul class="breadcrumbs-custom-path">
+            <li><a href="index.html">Home</a></li>
+            <li class="active">Video</li>
+        </ul>
+    </section>
+    <!-- <video autoplay muted loop id="video-background">
+        <source src="video/download (16).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
+   
+    <section class="section">
+        <div class="container">
+           
+                <div class="video-gallery">
+                    <!-- Video 1 -->
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C5On5KBvFoI/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"> 
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                    
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C42aZVbP8GE/?utm_source=ig_embed&utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"> 
+                    </blockquote>
+                    <script async onerror="var a=document.createElement('script');a.src='https://iframely.net/files/instagram_embed.js';document.body.appendChild(a);" src="https://www.instagram.com/embed.js"></script>
+                    
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C5FSyZnPHDI/?utm_source=ig_embed&amp;utm_campaign=loadinghttps://www.instagram.com/reel/C5ISheOPpxd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"> 
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C5BHhuOPqmK/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+                    
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4-3b57v-4D/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C445LSfvzVO/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+               
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4zwG4oPT9-/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+               
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4veFrbvqG6/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C5ISheOPpxd/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C5Db17LPFJz/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4r0WsdPl0j/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4qnxY1voWj/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4iazCXvKU_/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4gAtEqvTeq/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4dRpszv221/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4YGiTUPKbJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+
+
+
+                    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4UVDUTPJH1/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">  
+                    </blockquote>
+                    <script async src="//www.instagram.com/embed.js"></script>
+                    
+                    <!-- Add more video containers for additional videos -->
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="section footer-classic bg-default">
+        <div class="container">
+          <div class="row row-15">
+            <div class="col-sm-6">
+              <p class="rights"><span>Cinesculptors</span><span>&nbsp;</span><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>\&nbsp;</span>All Rights Reserved
+                \ Design by <a href="#">Anurag Pandey</a>
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="footer-contact"><a href="contacts.html">
+                  <div class="icon novi-icon mdi mdi-email-outline"></div>Contact Me</a></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+<div class="snackbars" id="form-output-global"></div>
+<script src="js/core.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
